@@ -1,0 +1,22 @@
+**************************************Can Make Triangle *************************************
+class Solution 
+{ 
+   int[] canMakeTriangle(int A[], int N) 
+   { 
+       // code here
+       int a[]=new int [N-2];
+       int t=0;
+       for(int i=0;i<N-2;i++){
+           if(A[i]+A[i+1]>A[i+2] && A[i]+A[i+2]>A[i+1] && A[i+1]+A[i+2]>A[i]){
+                a[t]=1;
+                t++;
+           }
+           else{
+              a[t]=0;
+              t++;
+           }
+       }
+       return a;
+       
+   }
+}
